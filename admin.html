@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <span lang="ru">Панель администратора - Сайт вакансий университета</span>
+        <span lang="kz" class="hidden">Әкімшілік панелі - Университет жұмыс орындарының сайты</span>
+    </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="admin-page"> <header>
+        <h1>
+            <span lang="ru">Панель администратора</span>
+            <span lang="kz" class="hidden">Әкімшілік панелі</span>
+        </h1>
+        <div class="header-actions">
+            <div class="language-switcher">
+                <button data-lang="ru" class="lang-button active">Русский</button>
+                <button data-lang="kz" class="lang-button">Қазақ</button>
+            </div>
+            <div class="theme-switcher">
+                <button id="theme-toggle">
+                    <span lang="ru">Темная тема</span>
+                    <span lang="kz" class="hidden">Қараңғы тақырып</span>
+                </button>
+            </div>
+            <div class="auth-buttons">
+                <a href="profile.html" class="button blue small">
+                    <span lang="ru">Личный кабинет</span>
+                    <span lang="kz" class="hidden">Жеке кабинет</span>
+                </a>
+                <button id="logout-button" class="button blue small">
+                    <span lang="ru">Выйти</span>
+                    <span lang="kz" class="hidden">Шығу</span>
+                </button>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="admin.html" class="active">
+                    <span lang="ru">Главная</span>
+                    <span lang="kz" class="hidden">Басты бет</span>
+                </a></li>
+                <li><a href="#">
+                    <span lang="ru">Управление вакансиями</span>
+                    <span lang="kz" class="hidden">Вакансияларды басқару</span>
+                </a></li>
+                <li><a href="#">
+                    <span lang="ru">Управление пользователями</span>
+                    <span lang="kz" class="hidden">Пайдаланушыларды басқару</span>
+                </a></li>
+                <li><a href="#">
+                    <span lang="ru">Анкеты</span>
+                    <span lang="kz" class="hidden">Сауалнамалар</span>
+                </a></li>
+                <li><a href="#">
+                    <span lang="ru">Настройки сайта</span>
+                    <span lang="kz" class="hidden">Сайттың баптаулары</span>
+                </a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2 lang="ru">Панель администратора</h2>
+        <h2 lang="kz" class="hidden">Әкімшілік панелі</h2>
+        <p lang="ru">Добро пожаловать в панель администратора!</p>
+        <p lang="kz" class="hidden">Әкімшілік панеліне қош келдіңіз!</p>
+
+        <section class="admin-actions">
+            <h3 lang="ru">Основные действия</h3>
+            <h3 lang="kz" class="hidden">Негізгі әрекеттер</h3>
+            <ul>
+                 <li><a href="#">
+                    <span lang="ru">Добавить новую вакансию</span>
+                    <span lang="kz" class="hidden">Жаңа вакансия қосу</span>
+                </a></li>
+                <li><a href="#">
+                    <span lang="ru">Редактировать вакансию</span>
+                    <span lang="kz" class="hidden">Вакансияны өңдеу</span>
+                </a></li>
+                <li><a href="#">
+                    <span lang="ru">Удалить вакансию</span>
+                    <span lang="kz" class="hidden">Вакансияны жою</span>
+                </a></li>
+                <li><a href="#">
+                    <span lang="ru">Просмотреть заявки</span>
+                    <span lang="kz" class="hidden">Өтінімдерді қарау</span>
+                </a></li>
+                <li><a href="#">
+                    <span lang="ru">Управление пользователями</span>
+                    <span lang="kz" class="hidden">Пайдаланушыларды басқару</span>
+                </a></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <nav>
+            <ul>
+                <li><a href="privacy.html">
+                    <span lang="ru">Политика конфиденциальности</span>
+                    <span lang="kz" class="hidden">Құпиялылық саясаты</span>
+                </a></li>
+            </ul>
+        </nav>
+        <p lang="ru">&copy; 2025 Сайт вакансий университета</p>
+        <p lang="kz" class="hidden">&copy; 2025 Университет жұмыс орындарының сайты</p>
+    </footer>
+
+    <script src="script.js" defer></script>
+</body>
+</html>

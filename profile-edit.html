@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <span lang="ru">Редактировать профиль - Сайт вакансий университета</span>
+        <span lang="kz" class="hidden">Профильді өңдеу - Университет жұмыс орындарының сайты</span>
+    </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="profile-edit-page"> <header>
+        <h1>
+            <span lang="ru">Сайт вакансий университета</span>
+            <span lang="kz" class="hidden">Университет жұмыс орындарының сайты</span>
+        </h1>
+        <div class="header-actions">
+            <div class="language-switcher">
+                <button data-lang="ru" class="lang-button active">Русский</button>
+                <button data-lang="kz" class="lang-button">Қазақ</button>
+            </div>
+            <div class="theme-switcher">
+                <button id="theme-toggle">
+                    <span lang="ru">Темная тема</span>
+                    <span lang="kz" class="hidden">Қараңғы тақырып</span>
+                </button>
+            </div>
+            <div class="auth-buttons">
+                 <a href="profile.html" class="button blue small active">
+                    <span lang="ru">Личный кабинет</span>
+                    <span lang="kz" class="hidden">Жеке кабинет</span>
+                </a>
+                 <button id="logout-button-edit-profile" class="button blue small">
+                    <span lang="ru">Выйти</span>
+                    <span lang="kz" class="hidden">Шығу</span>
+                </button>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">
+                    <span lang="ru">Главная</span>
+                    <span lang="kz" class="hidden">Басты бет</span>
+                </a></li>
+                <li><a href="vacancies.html">
+                    <span lang="ru">Вакансии</span>
+                    <span lang="kz" class="hidden">Вакансиялар</span>
+                </a></li>
+                <li><a href="profile.html">
+                    <span lang="ru">Личный кабинет</span>
+                    <span lang="kz" class="hidden">Жеке кабинет</span>
+                </a></li>
+                <li><a href="contacts.html">
+                    <span lang="ru">Контакты</span>
+                    <span lang="kz" class="hidden">Байланыстар</span>
+                </a></li>
+                <li><a href="about.html">
+                    <span lang="ru">О нас</span>
+                    <span lang="kz" class="hidden">Біз туралы</span>
+                </a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2 lang="ru">Редактировать профиль</h2>
+        <h2 lang="kz" class="hidden">Профильді өңдеу</h2>
+        <form class="profile-edit-form">
+            <div class="form-group">
+                <label for="name" lang="ru">Имя:</label>
+                <label for="name" lang="kz" class="hidden">Аты:</label>
+                <input type="text" id="name" name="name" value="" required> </div>
+            <div class="form-group">
+                <label for="email" lang="ru">Email:</label>
+                <label for="email" lang="kz" class="hidden">Email:</label>
+                <input type="email" id="email" name="email" value="" required> </div>
+            <div class="form-group">
+                <label for="university" lang="ru">Университет:</label>
+                <label for="university" lang="kz" class="hidden">Университет:</label>
+                <input type="text" id="university" name="university" value=""> </div>
+            <div class="form-group">
+                <label for="faculty" lang="ru">Факультет:</label>
+                <label for="faculty" lang="kz" class="hidden">Факультет:</label>
+                <input type="text" id="faculty" name="faculty" value=""> </div>
+            <div class="form-group">
+                <label for="course" lang="ru">Курс (для студентов):</label>
+                <label for="course" lang="kz" class="hidden">Курс (студенттер үшін):</label>
+                <input type="number" id="course" name="course" value="" min="1" max="6"> </div>
+            <button type="submit" class="button blue">
+                <span lang="ru">Сохранить изменения</span>
+                <span lang="kz" class="hidden">Өзгерістерді сақтау</span>
+            </button>
+            <a href="profile.html" class="button gray">
+                <span lang="ru">Отмена</span>
+                <span lang="kz" class="hidden">Бас тарту</span>
+            </a>
+        </form>
+    </main>
+
+    <footer>
+        <nav>
+            <ul>
+                <li><a href="privacy.html">
+                    <span lang="ru">Политика конфиденциальности</span>
+                    <span lang="kz" class="hidden">Құпиялылық саясаты</span>
+                </a></li>
+            </ul>
+        </nav>
+        <p lang="ru">&copy; 2025 Сайтвакансий университета</p>
+        <p lang="kz" class="hidden">&copy; 2025 Университет жұмыс орындарының сайты</p>
+    </footer>
+
+    <script src="script.js" defer></script>
+</body>
+</html>

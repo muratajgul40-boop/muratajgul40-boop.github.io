@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <span lang="ru">Сайт вакансий университета</span>
+        <span lang="kz" class="hidden">Университет жұмыс орындарының сайты</span>
+    </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="index-page">
+
+    <header>
+        <h1>
+            <span lang="ru">Сайт вакансий университета</span>
+            <span lang="kz" class="hidden">Университет жұмыс орындарының сайты</span>
+        </h1>
+        <div class="header-actions">
+            <div class="language-switcher">
+                <button data-lang="ru" class="lang-button active">Русский</button>
+                <button data-lang="kz" class="lang-button">Қазақ</button>
+            </div>
+            <div class="theme-switcher">
+                <button id="theme-toggle">
+                    <span lang="ru">Темная тема</span>
+                    <span lang="kz" class="hidden">Қараңғы тақырып</span>
+                </button>
+            </div>
+            <div class="auth-buttons">
+                <a href="login.html" class="button blue small">
+                    <span lang="ru">Вход</span>
+                    <span lang="kz" class="hidden">Кіру</span>
+                </a>
+                <a href="register.html" class="button blue small">
+                    <span lang="ru">Регистрация</span>
+                    <span lang="kz" class="hidden">Тіркелу</span>
+                </a>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">
+                    <span lang="ru">Главная</span>
+                    <span lang="kz" class="hidden">Басты бет</span>
+                </a></li>
+                <li><a href="vacancies.html">
+                    <span lang="ru">Вакансии</span>
+                    <span lang="kz" class="hidden">Вакансиялар</span>
+                </a></li>
+                <li><a href="profile.html">
+                    <span lang="ru">Личный кабинет</span>
+                    <span lang="kz" class="hidden">Жеке кабинет</span>
+                </a></li>
+                <li><a href="contacts.html">
+                    <span lang="ru">Контакты</span>
+                    <span lang="kz" class="hidden">Байланыстар</span>
+                </a></li>
+                <li><a href="about.html">
+                    <span lang="ru">О нас</span>
+                    <span lang="kz" class="hidden">Біз туралы</span>
+                </a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h2 lang="ru">Найди работу своей мечты в нашем университете!</h2>
+            <h2 lang="kz" class="hidden">Біздің университетіміздегі арманыңыздағы жұмысты табыңыз!</h2>
+            <p lang="ru">Свежие вакансии и предложения от лучших специалистов.</p>
+            <p lang="kz" class="hidden">Үздік мамандардан жаңа жұмыс орындары мен ұсыныстар.</p>
+            <a href="vacancies.html" class="button blue">
+                <span lang="ru">Смотреть вакансии</span>
+                <span lang="kz" class="hidden">Вакансияларды қарау</span>
+            </a>
+        </section>
+
+        <section class="top-specialists">
+            <h2 lang="ru">Топ специалисты недели</h2>
+            <h2 lang="kz" class="hidden">Аптаның үздік мамандары</h2>
+            <div class="specialists-list">
+                 <p lang="ru">Загрузка списка специалистов...</p>
+                 <p lang="kz" class="hidden">Мамандар тізімін жүктеу...</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <nav>
+            <ul>
+                <li><a href="privacy.html">
+                    <span lang="ru">Политика конфиденциальности</span>
+                    <span lang="kz" class="hidden">Құпиялылық саясаты</span>
+                </a></li>
+            </ul>
+        </nav>
+        <p lang="ru">&copy; 2025 Сайт вакансий университета</p>
+        <p lang="kz" class="hidden">&copy; 2025 Университет жұмыс орындарының сайты</p>
+    </footer>
+
+    <script src="script.js" defer></script>
+</body>
+</html>

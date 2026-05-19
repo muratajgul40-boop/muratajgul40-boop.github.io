@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <span lang="ru">Контакты - Сайт вакансий университета</span>
+        <span lang="kz" class="hidden">Байланыстар - Университет жұмыс орындарының сайты</span>
+    </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>
+            <span lang="ru">Сайт вакансий университета</span>
+            <span lang="kz" class="hidden">Университет жұмыс орындарының сайты</span>
+        </h1>
+        <div class="header-actions">
+            <div class="language-switcher">
+                <button data-lang="ru" class="lang-button active">Русский</button>
+                <button data-lang="kz" class="lang-button">Қазақ</button>
+            </div>
+            <div class="theme-switcher">
+                <button id="theme-toggle">
+                    <span lang="ru">Темная тема</span>
+                    <span lang="kz" class="hidden">Қараңғы тақырып</span>
+                </button>
+            </div>
+            <div class="auth-buttons">
+                <a href="login.html" class="button blue small">
+                    <span lang="ru">Вход</span>
+                    <span lang="kz" class="hidden">Кіру</span>
+                </a>
+                <a href="register.html" class="button blue small">
+                    <span lang="ru">Регистрация</span>
+                    <span lang="kz" class="hidden">Тіркелу</span>
+                </a>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">
+                    <span lang="ru">Главная</span>
+                    <span lang="kz" class="hidden">Басты бет</span>
+                </a></li>
+                <li><a href="vacancies.html">
+                    <span lang="ru">Вакансии</span>
+                    <span lang="kz" class="hidden">Вакансиялар</span>
+                </a></li>
+                <li><a href="profile.html">
+                    <span lang="ru">Личный кабинет</span>
+                    <span lang="kz" class="hidden">Жеке кабинет</span>
+                </a></li>
+                <li><a href="contacts.html">
+                    <span lang="ru">Контакты</span>
+                    <span lang="kz" class="hidden">Байланыстар</span>
+                </a></li>
+                <li><a href="about.html">
+                    <span lang="ru">О нас</span>
+                    <span lang="kz" class="hidden">Біз туралы</span>
+                </a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2 lang="ru">Контакты</h2>
+        <h2 lang="kz" class="hidden">Байланыстар</h2>
+        <p lang="ru">Вы можете связаться с нами по следующим контактам:</p>
+        <p lang="kz" class="hidden">Сіз бізбен келесі байланыстар бойынша хабарласа аласыз:</p>
+        <ul>
+            <li><strong lang="ru">Email:</strong> <strong lang="kz" class="hidden">Email:</strong> info@university-jobs.com</li>
+            <li><strong lang="ru">Телефон:</strong> <strong lang="kz" class="hidden">Телефон:</strong> +7 (XXX) XXX-XX-XX</li>
+            <li><strong lang="ru">Адрес:</strong> <strong lang="kz" class="hidden">Мекенжайы:</strong> Адрес университета</li>
+        </ul>
+
+        <h3 lang="ru">Форма обратной связи</h3>
+        <h3 lang="kz" class="hidden">Кері байланыс формасы</h3>
+        <form class="contact-form">
+            <div class="form-group">
+                <label for="name" lang="ru">Имя:</label>
+                <label for="name" lang="kz" class="hidden">Аты:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email" lang="ru">Email:</label>
+                <label for="email" lang="kz" class="hidden">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message" lang="ru">Сообщение:</label>
+                <label for="message" lang="kz" class="hidden">Хабарлама:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="button blue">
+                <span lang="ru">Отправить сообщение</span>
+                <span lang="kz" class="hidden">Хабарламаны жіберу</span>
+            </button>
+        </form>
+    </main>
+
+    <footer>
+        <nav>
+            <ul>
+                <li><a href="privacy.html">
+                    <span lang="ru">Политика конфиденциальности</span>
+                    <span lang="kz" class="hidden">Құпиялылық саясаты</span>
+                </a></li>
+            </ul>
+        </nav>
+        <p lang="ru">&copy; 2025 Сайт вакансий университета</p>
+        <p lang="kz" class="hidden">&copy; 2025 Университет жұмыс орындарының сайты</p>
+    </footer>
+
+    <script src="script.js" defer></script>
+</body>
+</html>

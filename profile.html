@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <span lang="ru">Личный кабинет - Сайт вакансий университета</span>
+        <span lang="kz" class="hidden">Жеке кабинет - Университет жұмыс орындарының сайты</span>
+    </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="profile-page">
+    <header>
+        <h1>
+            <span lang="ru">Сайт вакансий университета</span>
+            <span lang="kz" class="hidden">Университет жұмыс орындарының сайты</span>
+        </h1>
+        <div class="header-actions">
+            <div class="language-switcher">
+                <button data-lang="ru" class="lang-button active">Русский</button>
+                <button data-lang="kz" class="lang-button">Қазақ</button>
+            </div>
+            <div class="theme-switcher">
+                <button id="theme-toggle">
+                    <span lang="ru">Темная тема</span>
+                    <span lang="kz" class="hidden">Қараңғы тақырып</span>
+                </button>
+            </div>
+            <div class="auth-buttons">
+                <a href="profile.html" class="button blue small active">
+                    <span lang="ru">Личный кабинет</span>
+                    <span lang="kz" class="hidden">Жеке кабинет</span>
+                </a>
+                <button id="logout-button-profile" class="button blue small">
+                    <span lang="ru">Выйти</span>
+                    <span lang="kz" class="hidden">Шығу</span>
+                </button>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">
+                    <span lang="ru">Главная</span>
+                    <span lang="kz" class="hidden">Басты бет</span>
+                </a></li>
+                <li><a href="vacancies.html">
+                    <span lang="ru">Вакансии</span>
+                    <span lang="kz" class="hidden">Вакансиялар</span>
+                </a></li>
+                <li><a href="profile.html">
+                    <span lang="ru">Личный кабинет</span>
+                    <span lang="kz" class="hidden">Жеке кабинет</span>
+                </a></li>
+                <li><a href="contacts.html">
+                    <span lang="ru">Контакты</span>
+                    <span lang="kz" class="hidden">Байланыстар</span>
+                </a></li>
+                <li><a href="about.html">
+                    <span lang="ru">О нас</span>
+                    <span lang="kz" class="hidden">Біз туралы</span>
+                </a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2 lang="ru">Личный кабинет</h2>
+        <h2 lang="kz" class="hidden">Жеке кабинет</h2>
+
+        <section class="user-info">
+            <h3 lang="ru">Основная информация</h3>
+            <h3 lang="kz" class="hidden">Негізгі ақпарат</h3>
+            <p><strong lang="ru">Имя:</strong> <strong lang="kz" class="hidden">Аты-жөні:</strong> <span id="name-placeholder">Загрузка...</span></p>
+            <p><strong lang="ru">Email:</strong> <strong lang="kz" class="hidden">Email:</strong> <span id="email-placeholder">Загрузка...</span></p>
+            <p><strong lang="ru">Университет:</strong> <strong lang="kz" class="hidden">Университет:</strong> <span id="university-placeholder">Загрузка...</span></p>
+            <p><strong lang="ru">Факультет:</strong> <strong lang="kz" class="hidden">Факультет:</strong> <span id="faculty-placeholder">Загрузка...</span></p>
+            <p><strong id="course-label" lang="ru">Курс (для студентов):</strong> <strong id="course-label-kz" lang="kz" class="hidden">Курс (студенттер үшін):</strong> <span id="course-placeholder">Загрузка...</span></p>
+            <a href="profile-edit.html" class="button blue small">
+                <span lang="ru">Редактировать профиль</span>
+                <span lang="kz" class="hidden">Профильді өңдеу</span>
+            </a>
+        </section>
+
+        <section class="user-applications">
+            <h3 lang="ru">Мои отклики</h3>
+            <h3 lang="kz" class="hidden">Менің жауаптарым</h3>
+            <ul class="application-list">
+                <p lang="ru">Загрузка откликов...</p>
+                 <p lang="kz" class="hidden">Жауаптарды жүктеу...</p>
+            </ul>
+            <a href="#" class="button blue small">
+                <span lang="ru">Посмотреть все отклики</span>
+                <span lang="kz" class="hidden">Барлық жауаптарды көру</span>
+            </a>
+        </section>
+
+        <section class="saved-vacancies">
+            <h3 lang="ru">Сохраненные вакансии</h3>
+            <h3 lang="kz" class="hidden">Сақталған вакансиялар</h3>
+            <ul class="saved-list">
+                <p lang="ru">Загрузка сохраненных вакансий...</p>
+                 <p lang="kz" class="hidden">Сақталған вакансияларды жүктеу...</p>
+            </ul>
+             <a href="#" class="button blue small">
+                <span lang="ru">Посмотреть все сохраненные</span>
+                <span lang="kz" class="hidden">Барлық сақталғандарды көру</span>
+            </a>
+        </section>
+
+        <section class="user-forms">
+            <h3 lang="ru">Мои анкеты</h3>
+            <h3 lang="kz" class="hidden">Менің сауалнамаларым</h3>
+            <p lang="ru">Здесь вы можете просмотреть отправленные вами анкеты.</p>
+            <p lang="kz" class="hidden">Бұл жерде сіз жіберген сауалнамаларды көре аласыз.</p>
+            <ul class="form-list">
+                <li>
+                    <strong lang="ru">Анкета на стажировку:</strong> <span lang="ru">Отправлено 15.04.2025</span>
+                    <strong lang="kz" class="hidden">Тәжірибеге арналған сауалнама:</strong> <span lang="kz" class="hidden">15.04.2025 жіберілді</span>
+                    <a href="#" class="button small">
+                        <span lang="ru">Просмотреть</span>
+                        <span lang="kz" class="hidden">Қарау</span>
+                    </a>
+                </li>
+                <li>
+                    <strong lang="ru">Анкета соискателя:</strong> <span lang="ru">Отправлено 10.04.2025</span>
+                    <strong lang="kz" class="hidden">Іздеуші сауалнамасы:</strong> <span lang="kz" class="hidden">10.04.2025 жіберілді</span>
+                    <a href="#" class="button small">
+                        <span lang="ru">Просмотреть</span>
+                        <span lang="kz" class="hidden">Қарау</span>
+                    </a>
+                </li>
+            </ul>
+            <a href="forms.html" class="button blue small">
+                <span lang="ru">Перейти к анкетам</span>
+                <span lang="kz" class="hidden">Сауалнамаларға өту</span>
+            </a>
+        </section>
+    </main>
+
+    <footer>
+        <nav>
+            <ul>
+                <li><a href="privacy.html">
+                    <span lang="ru">Политика конфиденциальности</span>
+                    <span lang="kz" class="hidden">Құпиялылық саясаты</span>
+                </a></li>
+            </ul>
+        </nav>
+        <p lang="ru">&copy; 2025 Сайт вакансий университета</p>
+        <p lang="kz" class="hidden">&copy; 2025 Университет жұмыс орындарының сайты</p>
+    </footer>
+
+    <script src="script.js" defer></script>
+</body>
+</html>

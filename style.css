@@ -1,0 +1,931 @@
+/* style.css */
+
+/* --- Общие стили --- */
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Стили для темной темы */
+body.dark-theme {
+    background-color: #1e1e1e;
+    color: #eee;
+}
+
+body.dark-theme a {
+    color: #8ab4f8; /* Светлее синий для ссылок в темной теме */
+}
+
+body.dark-theme .button.blue {
+    background-color: #8ab4f8;
+    color: #1e1e1e;
+}
+
+body.dark-theme .button.gray {
+    background-color: #555;
+    color: #eee;
+}
+
+body.dark-theme header {
+    background-color: #2d2d2d;
+    color: #eee;
+}
+
+body.dark-theme footer {
+    background-color: #2d2d2d;
+    color: #eee;
+}
+
+body.dark-theme nav ul li a {
+     color: #eee;
+}
+
+body.dark-theme nav ul li a:hover {
+    color: #8ab4f8;
+}
+
+body.dark-theme main {
+    background-color: #252526;
+    color: #eee;
+}
+
+body.dark-theme .form-group label {
+    color: #eee;
+}
+
+body.dark-theme input[type="text"],
+body.dark-theme input[type="email"],
+body.dark-theme input[type="password"],
+body.dark-theme input[type="number"],
+body.dark-theme textarea {
+    background-color: #3c3c3c;
+    color: #eee;
+    border: 1px solid #555;
+}
+
+body.dark-theme input[type="text"]:focus,
+body.dark-theme input[type="email"]:focus,
+body.dark-theme input[type="password"]:focus,
+body.dark-theme input[type="number"]:focus,
+body.dark-theme textarea:focus {
+    border-color: #8ab4f8;
+    outline: none;
+}
+
+body.dark-theme .form-group.has-error input,
+body.dark-theme .form-group.has-error textarea {
+    border-color: #f44336; /* Красный для ошибок в темной теме */
+}
+
+body.dark-theme .error-message {
+    color: #f44336; /* Красный текст ошибки в темной теме */
+}
+
+body.dark-theme .vacancy-item,
+body.dark-theme .specialist-item,
+body.dark-theme .vacancy-item-details {
+     background-color: #2d2d2d;
+     border-color: #555;
+}
+
+body.dark-theme .vacancy-item h3,
+body.dark-theme .specialist-item h3,
+body.dark-theme .vacancy-item-details h2,
+body.dark-theme .vacancy-item-details h3 {
+    color: #eee;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+    color: #333;
+    margin-top: 0;
+}
+
+body.dark-theme h1,
+body.dark-theme h2,
+body.dark-theme h3,
+body.dark-theme h4,
+body.dark-theme h5,
+body.dark-theme h6 {
+    color: #eee;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #0056b3;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* --- Стили для шапки (Header) --- */
+
+header {
+    background-color: #fff;
+    padding: 15px 20px;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.8em;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.language-switcher button,
+.theme-switcher button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.language-switcher button:hover,
+.theme-switcher button:hover {
+    background-color: #eee;
+}
+
+body.dark-theme .language-switcher button:hover,
+body.dark-theme .theme-switcher button:hover {
+    background-color: #555;
+}
+
+.language-switcher button.active {
+    background-color: #007bff;
+    color: #fff;
+}
+
+body.dark-theme .language-switcher button.active {
+    background-color: #8ab4f8;
+    color: #1e1e1e;
+}
+
+
+.auth-buttons a,
+.auth-buttons button {
+     margin-left: 5px; /* Отступ между кнопками */
+}
+
+/* --- Стили для навигации (Nav) --- */
+
+nav {
+    margin-top: 10px;
+    width: 100%;
+    text-align: center;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #333;
+    font-size: 1.1em;
+    padding: 5px 0;
+    display: block;
+    transition: color 0.2s ease, border-bottom-color 0.2s ease;
+    border-bottom: 2px solid transparent;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    color: #007bff;
+    border-bottom-color: #007bff;
+}
+
+body.dark-theme nav ul li a:hover,
+body.dark-theme nav ul li a.active {
+    color: #8ab4f8;
+    border-bottom-color: #8ab4f8;
+}
+
+/* --- Стили для основного контента (Main) --- */
+
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 20px auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+body.dark-theme main {
+    background-color: #252526;
+}
+
+main h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+body.dark-theme main h2 {
+     border-bottom-color: #3c3c3c;
+}
+
+/* --- Стили для секции Hero (только на index.html) --- */
+.hero {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #e9f7ff;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+body.dark-theme .hero {
+    background-color: #333;
+}
+
+.hero h2 {
+    color: #007bff;
+    margin-bottom: 10px;
+    border-bottom: none; /* Убираем нижнюю границу в Hero секции */
+}
+
+body.dark-theme .hero h2 {
+     color: #8ab4f8;
+}
+
+.hero p {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+}
+
+/* --- Стили для кнопок --- */
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 1em;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.2s ease, opacity 0.2s ease;
+    border: none; /* Убираем стандартную рамку у кнопок */
+}
+
+.button.blue {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.button.blue:hover {
+    background-color: #0056b3;
+    text-decoration: none;
+    opacity: 0.9;
+}
+
+.button.gray {
+    background-color: #6c757d;
+    color: #fff;
+}
+
+.button.gray:hover {
+    background-color: #5a6268;
+    text-decoration: none;
+    opacity: 0.9;
+}
+
+
+.button.small {
+    padding: 5px 10px;
+    font-size: 0.9em;
+}
+
+/* --- Стили для форм --- */
+.login-form,
+.register-form,
+.contact-form,
+.profile-edit-form {
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+body.dark-theme .login-form,
+body.dark-theme .register-form,
+body.dark-theme .contact-form,
+body.dark-theme .profile-edit-form {
+    background-color: #2d2d2d;
+    border-color: #555;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+body.dark-theme .form-group label {
+    color: #eee;
+}
+
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="password"],
+.form-group input[type="number"],
+.form-group textarea {
+    width: calc(100% - 22px); /* Ширина минус padding и border */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+    box-sizing: border-box; /* Учитываем padding и border в общей ширине */
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="email"]:focus,
+.form-group input[type="password"]:focus,
+.form-group input[type="number"]:focus,
+.form-group textarea:focus {
+    border-color: #007bff;
+    outline: none; /* Убираем стандартный синий контур при фокусе */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.25); /* Добавляем тень при фокусе */
+}
+
+.form-group.has-error input,
+.form-group.has-error textarea {
+    border-color: red;
+}
+
+.error-message {
+    color: red;
+    font-size: 0.9em;
+    margin-top: 5px;
+}
+
+/* Стили для ссылок в формах (например, "Нет аккаунта?") */
+.login-form p,
+.register-form p {
+    text-align: center;
+    margin-top: 15px;
+}
+
+/* --- Стили для страниц Профиля и Админа --- */
+.user-info,
+.user-applications,
+.saved-vacancies,
+.user-forms,
+.admin-actions {
+    margin-bottom: 30px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+body.dark-theme .user-info,
+body.dark-theme .user-applications,
+body.dark-theme .saved-vacancies,
+body.dark-theme .user-forms,
+body.dark-theme .admin-actions {
+    background-color: #2d2d2d;
+    border-color: #555;
+}
+
+
+.user-info h3,
+.user-applications h3,
+.saved-vacancies h3,
+.user-forms h3,
+.admin-actions h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #333;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 5px;
+}
+
+body.dark-theme .user-info h3,
+body.dark-theme .user-applications h3,
+body.dark-theme .saved-vacancies h3,
+body.dark-theme .user-forms h3,
+body.dark-theme .admin-actions h3 {
+     color: #eee;
+     border-bottom-color: #3c3c3c;
+}
+
+.user-info p {
+    margin-bottom: 10px;
+}
+
+.application-list li,
+.saved-list li,
+.user-forms li {
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px; /* Отступ между элементами внутри списка */
+}
+
+body.dark-theme .application-list li,
+body.dark-theme .saved-list li,
+body.dark-theme .user-forms li {
+    border-bottom-color: #3c3c3c;
+}
+
+
+.application-list li:last-child,
+.saved-list li:last-child,
+.user-forms li:last-child {
+    border-bottom: none; /* Убираем нижнюю границу у последнего элемента */
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+.application-list li strong,
+.saved-list li strong,
+.user-forms li strong {
+    min-width: 120px; /* Минимальная ширина для меток */
+}
+
+.status {
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 0.9em;
+    font-weight: bold;
+}
+
+.status.pending {
+    background-color: #ffc107; /* Желтый */
+    color: #333;
+}
+
+.status.accepted {
+    background-color: #28a745; /* Зеленый */
+    color: #fff;
+}
+
+.status.rejected {
+    background-color: #dc3545; /* Красный */
+    color: #fff;
+}
+
+.admin-actions ul li {
+    margin-bottom: 10px;
+}
+
+/* --- Стили для списка форм на forms.html --- */
+.form-list .form-item {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 20px;
+    background-color: #f9f9f9;
+}
+
+body.dark-theme .form-list .form-item {
+    background-color: #2d2d2d;
+    border-color: #555;
+}
+
+
+.form-list .form-item h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #333;
+     border-bottom: none;
+     padding-bottom: 0;
+}
+
+body.dark-theme .form-list .form-item h3 {
+    color: #eee;
+}
+
+/* --- Стили для списка вакансий --- */
+.vacancies-list .vacancy-item {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 20px;
+    background-color: #f9f9f9;
+}
+
+.vacancies-list .vacancy-item h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #007bff;
+     border-bottom: none;
+     padding-bottom: 0;
+}
+
+body.dark-theme .vacancies-list .vacancy-item h3 {
+     color: #8ab4f8;
+}
+
+.vacancies-list .vacancy-item p {
+    margin-bottom: 10px;
+}
+
+.vacancies-list .vacancy-item h4 {
+    margin-top: 15px;
+    margin-bottom: 5px;
+    color: #555;
+    font-size: 1em;
+}
+
+body.dark-theme .vacancies-list .vacancy-item h4 {
+    color: #ccc;
+}
+
+.vacancies-list .vacancy-item ul {
+    margin-bottom: 15px;
+}
+
+.vacancies-list .vacancy-item ul li {
+    margin-bottom: 5px;
+    padding-bottom: 0;
+    border-bottom: none;
+    display: list-item; /* Возвращаем стандартное отображение списка */
+    list-style: disc inside; /* Добавляем маркеры */
+}
+
+.vacancies-list .vacancy-item .button {
+    margin-right: 10px;
+}
+
+
+/* --- Стили для списка топ специалистов --- */
+.top-specialists .specialists-list {
+    display: grid; /* Используем сетку для расположения элементов */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Адаптивные колонки */
+    gap: 20px; /* Отступ между элементами сетки */
+    margin-top: 20px;
+}
+
+.top-specialists .specialist-item {
+     border: 1px solid #ddd;
+     border-radius: 8px;
+     padding: 15px;
+     background-color: #f9f9f9;
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between; /* Распределяем элементы по высоте */
+     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.top-specialists .specialist-item h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #333;
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+body.dark-theme .top-specialists .specialist-item h3 {
+    color: #eee;
+}
+
+.top-specialists .specialist-item p {
+    margin-bottom: 10px;
+}
+
+.top-specialists .specialist-item h4 {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    color: #555;
+    font-size: 1em;
+}
+
+body.dark-theme .top-specialists .specialist-item h4 {
+    color: #ccc;
+}
+
+.top-specialists .specialist-item ul {
+    margin-bottom: 15px;
+}
+
+.top-specialists .specialist-item ul li {
+    margin-bottom: 5px;
+    padding-bottom: 0;
+    border-bottom: none;
+    display: list-item;
+    list-style: disc inside;
+     font-size: 0.95em;
+}
+
+.top-specialists .specialist-item .button {
+    align-self: flex-start; /* Прижимаем кнопку к левому краю */
+    margin-top: 10px;
+}
+
+
+/* --- Стили для деталей вакансии (vacancy.html) --- */
+.vacancy-details .vacancy-item-details {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    margin-bottom: 20px;
+}
+
+body.dark-theme .vacancy-details .vacancy-item-details {
+     background-color: #2d2d2d;
+     border-color: #555;
+}
+
+.vacancy-details .vacancy-item-details h2 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #007bff;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+     text-align: left; /* Выравнивание заголовка по левому краю */
+}
+
+body.dark-theme .vacancy-details .vacancy-item-details h2 {
+     color: #8ab4f8;
+     border-bottom-color: #3c3c3c;
+}
+
+.vacancy-details .vacancy-item-details h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: #333;
+    border-bottom: none;
+    padding-bottom: 0;
+    font-size: 1.2em;
+}
+
+body.dark-theme .vacancy-details .vacancy-item-details h3 {
+    color: #eee;
+}
+
+.vacancy-details .vacancy-item-details p {
+    margin-bottom: 15px;
+}
+
+.vacancy-details .vacancy-item-details ul {
+    margin-bottom: 20px;
+}
+
+.vacancy-details .vacancy-item-details ul li {
+     margin-bottom: 8px;
+     padding-bottom: 0;
+     border-bottom: none;
+     display: list-item;
+     list-style: disc inside;
+     font-size: 1em;
+}
+
+.vacancy-details .vacancy-item-details .button {
+    margin-right: 15px;
+    margin-top: 10px; /* Отступ сверху для кнопок */
+}
+
+
+/* --- Стили для футера (Footer) --- */
+
+footer {
+    background-color: #fff;
+    padding: 20px;
+    text-align: center;
+    border-top: 1px solid #ddd;
+    margin-top: 20px;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.05);
+}
+
+footer nav ul {
+    margin-bottom: 10px;
+}
+
+footer nav ul li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+footer nav ul li a {
+    color: #333;
+}
+
+body.dark-theme footer {
+    background-color: #2d2d2d;
+    color: #eee;
+    border-top-color: #3c3c3c;
+}
+
+body.dark-theme footer nav ul li a {
+    color: #eee;
+}
+
+
+/* --- Вспомогательные классы --- */
+.hidden {
+    display: none;
+}
+
+/* --- Медиа-запросы для адаптивности --- */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .header-actions {
+        margin-top: 10px;
+        width: 100%;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10px;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    main {
+        padding: 10px;
+        margin: 10px auto;
+    }
+
+    .button {
+        width: auto; /* Кнопки могут быть шире на мобильных */
+    }
+
+    .login-form,
+    .register-form,
+    .contact-form,
+    .profile-edit-form {
+        padding: 15px;
+    }
+
+    .form-group input[type="text"],
+    .form-group input[type="email"],
+    .form-group input[type="password"],
+     .form-group input[type="number"],
+    .form-group textarea {
+        width: calc(100% - 20px); /* Уменьшаем padding */
+    }
+
+     .application-list li,
+     .saved-list li,
+     .user-forms li {
+        flex-direction: column;
+        align-items: flex-start;
+     }
+
+     .application-list li strong,
+     .saved-list li strong,
+     .user-forms li strong {
+         min-width: auto;
+         margin-bottom: 5px;
+     }
+
+     .status {
+         margin-top: 5px;
+     }
+
+     .vacancies-list .vacancy-item {
+         padding: 10px;
+     }
+
+    .top-specialists .specialists-list {
+         grid-template-columns: 1fr; /* На мобильных устройствах отображаем в один столбец */
+         gap: 15px;
+    }
+     .top-specialists .specialist-item {
+        padding: 10px;
+     }
+
+     .vacancy-details .vacancy-item-details {
+         padding: 15px;
+     }
+
+     .vacancy-details .vacancy-item-details .button {
+         margin-right: 10px;
+         margin-top: 8px;
+     }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5em;
+    }
+
+    .header-actions {
+         flex-direction: column;
+         gap: 5px;
+    }
+
+    .language-switcher,
+    .theme-switcher,
+    .auth-buttons {
+        width: 100%;
+        text-align: center;
+    }
+
+    .language-switcher button,
+    .theme-switcher button {
+         width: calc(50% - 10px);
+         box-sizing: border-box;
+         margin: 2px;
+    }
+
+    .auth-buttons a,
+    .auth-buttons button {
+        width: calc(50% - 10px);
+        box-sizing: border-box;
+        margin: 2px;
+    }
+
+
+    nav ul li {
+        margin: 3px 0;
+    }
+
+    .button {
+         padding: 8px 15px;
+         font-size: 0.9em;
+    }
+
+    .button.small {
+        padding: 4px 8px;
+        font-size: 0.8em;
+    }
+
+    .login-form,
+    .register-form,
+    .contact-form,
+    .profile-edit-form {
+        padding: 10px;
+    }
+
+     .form-group input[type="text"],
+    .form-group input[type="email"],
+    .form-group input[type="password"],
+     .form-group input[type="number"],
+    .form-group textarea {
+        width: calc(100% - 16px);
+    }
+
+    .vacancies-list .vacancy-item {
+         padding: 8px;
+    }
+
+    .top-specialists .specialist-item {
+        padding: 8px;
+     }
+
+     .vacancy-details .vacancy-item-details {
+         padding: 10px;
+     }
+
+     .vacancy-details .vacancy-item-details .button {
+         margin-right: 8px;
+         margin-top: 6px;
+     }
+}
